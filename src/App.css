@@ -1,0 +1,809 @@
+/* Estilos para la cabecera general */
+.carousel-image {
+  width: 100vw; /* Ancho completo de la ventana */
+  height: 80vh; /* Alto completo de la ventana */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+  margin: 5px; /* Elimina el margen */
+  position: relative; /* Permite que se posicione bien en el carrusel */
+  top: 0; /* Ajusta la posición superior */
+  left: 0; /* Ajusta la posición izquierda */
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container img {
+  width: 80px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff7043; /* Color suave de naranja para el tema de la panadería */
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Ajuste de espacio para acercar los íconos */
+}
+
+.icon-container img {
+  width: 50px; /* Tamaño ajustado */
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.icon-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown menu */
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  list-style: none;
+  min-width: 200px; /* Ajusta el ancho mínimo para dar más espacio al texto */
+  z-index: 1000; /* Asegura que el menú se muestre sobre otros elementos */
+}
+
+nav ul li:hover ul {
+  display: block;
+}
+
+nav ul li ul li {
+  padding: 8px 16px;
+  white-space: nowrap; /* Asegura que el texto no se divida en varias líneas */
+}
+
+nav ul li ul li a {
+  color: #333;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+nav ul li ul li a:hover {
+  color: #ff7043;
+}
+
+/* Estilos para la página de inicio */
+.product-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-header {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1000px; /* Limitando el ancho máximo */
+  margin: 0 auto; /* Centrar el contenedor de productos */
+}
+
+.product-item {
+  text-decoration: none;
+  color: #333;
+  margin: 10px; /* Margen del contenedor */
+  width: calc(300px + 30px); /* Ancho del contenedor considerando el margen */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  text-align: center; /* Centra el texto dentro del enlace */
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.product-image {
+  width: calc(100% - 30px); /* Aumenta el ancho de la imagen para el margen */
+  height: auto;
+  margin: 15px; /* Aumenta el margen a las imágenes de los productos */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+  display: block; /* Asegura que no haya espacio debajo de la imagen */
+}
+
+
+.product-item:hover {
+  transform: scale(1.05);
+  color: #ff7043;
+}
+
+.product-name {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-container img,
+  .icon-container img {
+    width: 100px;
+    height: auto;
+  }
+
+  .product-list {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+    align-items: center; /* Centra los productos */
+  }
+}
+
+/*mapa*/
+.mapa {
+  display: flex; /* Usar flexbox para centrar el contenido */
+  justify-content: center; /* Centra horizontalmente */
+  margin: 20px 0; /* Espacio alrededor del mapa */
+}
+
+
+
+/* Estilos generales */
+.main {
+  padding: 20px;
+}
+
+.categoria-header {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.productos-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrar los productos en el contenedor */
+  gap: 20px; /* Espaciado entre productos */
+}
+
+.product2-image {
+  width: calc(100% - 30px); /* Aumenta el ancho de la imagen para el margen */
+  height: auto;
+  margin: 15px; /* Aumenta el margen a las imágenes de los productos */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+  display: block; /* Asegura que no haya espacio debajo de la imagen */
+}
+
+
+.producto {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px; /* Ancho fijo para los productos */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  overflow: hidden; /* Oculta el desbordamiento */
+}
+
+.producto:hover {
+  transform: scale(1.05); /* Efecto de hover */
+}
+
+.producto-imagen {
+  width: 100%;
+  height: 150px; /* Altura fija para las imágenes */
+  object-fit: cover; /* Asegura que la imagen cubra el área sin distorsión */
+}
+
+.producto-nombre {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.producto-precio {
+  font-size: 16px;
+  color: #ff7043; /* Color de precio */
+  margin: 5px 0 10px;
+}
+
+/* Estilos para los botones */
+.botones {
+  display: flex;
+  justify-content: space-around; /* Espacio uniforme entre botones */
+  margin-bottom: 10px; /* Margen inferior para separar de otros elementos */
+}
+
+.boton-agregar, .boton-ver {
+  background-color: #f7d337; /* Color del botón */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-agregar:hover, .boton-ver:hover {
+  background-color: #f7d337; /* Color de hover para los botones */
+}
+
+.botonVolver {
+  margin: 5px; /* Margen inferior para separar del resto del contenido */
+  font-size: 20px;
+  background-color: #ff0000; /* Color de hover para los botones */
+  padding: 3px 13px;
+}
+
+/*CCompras*/
+.cart-container {
+  padding: 20px;
+  background-color: #f9f9f9; /* Fondo claro para el carrito */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  max-width: 800px; /* Ancho máximo */
+  margin: auto; /* Centra el contenedor */
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Fondo blanco para cada producto */
+  padding: 15px;
+  margin-bottom: 10px; /* Espaciado entre productos */
+  border-radius: 8px; /* Bordes redondeados para productos */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil para productos */
+}
+
+.product-details {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 100px; /* Tamaño fijo para imágenes */
+  margin-right: 15px; /* Espacio a la derecha de la imagen */
+  border-radius: 5px; /* Bordes redondeados para las imágenes */
+}
+
+.product-name {
+  font-size: 18px; /* Tamaño de fuente para el nombre */
+  margin: 0; /* Elimina margen */
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  background: none; /* Sin fondo para los botones */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia cursor a pointer */
+  font-size: 20px; /* Tamaño de fuente para iconos */
+  margin-left: 10px; /* Espacio entre botones */
+}
+
+.btn-d {
+  background-color: #ffc107;
+  color: #ffffff;
+  padding: 10px 15px;
+  display: flex;
+  margin-left: 15px;
+}
+
+.btn-add {
+  color: #28a745; /* Verde para el botón de agregar */
+}
+
+.btn-remove {
+  color: #ffc107; /* Amarillo para el botón de eliminar */
+}
+
+.btn-delete {
+  color: #dc3545; /* Rojo para el botón de eliminar */
+}
+
+.cart-summary {
+  text-align: center;
+  margin-top: 20px; /* Espacio encima del resumen */
+  padding: 10px;
+  border-top: 1px solid #ddd; /* Línea superior para separar el resumen */
+}
+
+.btn-order {
+  background-color: #f7d337; /* Color para el botón de pedido */
+  color: #fff; /* Texto blanco */
+  padding: 10px 20px; /* Relleno para el botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia cursor a pointer */
+  transition: background-color 0.3s; /* Efecto al pasar el ratón */
+  margin: 10px;
+}
+
+.btn-order:hover {
+  background-color: #f7d337; /* Color al pasar el ratón */
+}
+
+
+/*login*/
+/* Estilo para el contenedor de inicio de sesión */
+.login-container {
+  width: 300px; /* Ancho del contenedor */
+  padding: 20px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  background-color: #ffffff; /* Color de fondo */
+  margin-top: 50px; /* Espacio superior */
+}
+
+/* Estilo para el título */
+h1 {
+  text-align: center; /* Centrar el texto */
+  color: var(--color-primary); /* Color del texto */
+}
+
+/* Estilo para los inputs */
+input {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  margin: 10px 0; /* Margen superior e inferior */
+  border: 1px solid #ccc; /* Borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para el botón de inicio de sesión */
+.login-btn {
+  width: 100%; /* Ancho completo */
+  padding: 10px; /* Espaciado interno */
+  background-color: #ffc107; /* Color de fondo */
+  color: #fff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambiar el cursor a puntero */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+/* Efecto hover para el botón */
+.login-btn:hover {
+  background-color: #ffc107; /* Color de fondo al pasar el mouse */
+}
+
+/* Estilo para el enlace de contraseña olvidada */
+.forgot-password {
+  text-align: center; /* Centrar el texto */
+  margin: 10px 0; /* Margen superior e inferior */
+}
+
+/* Estilo para el enlace de registro */
+.register-link {
+  color: var(--color-primary); /* Color del texto */
+  text-decoration: none; /* Sin subrayado */
+}
+
+.register-link:hover {
+  text-decoration: underline; /* Subrayar al pasar el mouse */
+}
+
+
+/*lista usuario*/
+/* Estilo general del contenedor principal */
+.mainAU {
+  padding: 20px; /* Espaciado interno */
+  background-color: #f8f9fa; /* Color de fondo */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin: 20px; /* Margen externo */
+}
+
+/* Estilo para el título */
+h1 {
+  text-align: center; /* Centrar el texto */
+  color: #000; /* Color del texto */  
+}
+
+/* Estilo para la barra de búsqueda */
+.search-bar {
+  margin: 20px 0; /* Espaciado superior e inferior */
+  display: flex; /* Usar flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Estilo para el input de búsqueda */
+.search-bar input {
+  width: 300px; /* Ancho del input */
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ced4da; /* Borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  font-size: 16px; /* Tamaño de la fuente */
+}
+
+/* Estilo para la tabla de datos */
+.react-data-table {
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para los botones de acciones */
+.btn-small {
+  padding: 5px 10px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  font-size: 14px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambiar el cursor a puntero */
+}
+
+/* Estilo para el botón de eliminar */
+.eliminar {
+  background-color: #dc3545; /* Color de fondo */
+  color: white; /* Color del texto */
+  margin-right: 5px; /* Margen a la derecha */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+/* Efecto hover para el botón de eliminar */
+.eliminar:hover {
+  background-color: #ff0019; /* Color al pasar el mouse */
+}
+
+/* Estilo para el botón de ver */
+.ver {
+  background-color: #ff701f; /* Color de fondo */
+  color: white; /* Color del texto */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+/* Efecto hover para el botón de ver */
+.ver:hover {
+  background-color: #ff701f; /* Color al pasar el mouse */
+}
+
+/*ver*/
+/* Estilo general del contenedor principal */
+main {
+  padding: 20px; /* Espaciado interno */
+  background-color: #f8f9fa; /* Color de fondo */
+  border-radius: 10px; /* Esquinas redondeadas */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+  margin: 20px; /* Margen externo */
+}
+
+/* Estilo para el título */
+.main-h1 {
+  text-align: center; /* Centrar el texto */
+  color: var(--color-primary); /* Color del texto */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+/* Contenedor de contenido */
+.content-ELUSU {
+  display: flex; /* Usar flexbox para organizar contenido */
+  justify-content: space-between; /* Espacio entre elementos */
+  margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para la sección del formulario */
+.form-sectionELUSU {
+  flex: 1; /* Tomar espacio proporcional */
+  margin-right: 20px; /* Espaciado a la derecha */
+}
+
+/* Estilo para el formulario */
+.formELUSU {
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Apilar los elementos */
+}
+
+/* Estilo para las etiquetas */
+label {
+  margin-bottom: 5px; /* Espaciado inferior */
+  font-weight: bold; /* Negrita */
+}
+
+/* Estilo para los inputs */
+input {
+  padding: 10px; /* Espaciado interno */
+  border: 1px solid #ced4da; /* Borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  margin-bottom: 15px; /* Espaciado inferior */
+  font-size: 16px; /* Tamaño de la fuente */
+  width: 100%; /* Ancho completo */
+  background-color: #f8f9fa; /* Color de fondo */
+}
+
+/* Estilo para la sección de la imagen */
+.image-sectionELUSU {
+  flex: 1; /* Tomar espacio proporcional */
+  display: flex; /* Usar flexbox */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+}
+
+/* Estilo para la imagen */
+.image-sectionELUSU img {
+  max-width: 100%; /* Ancho máximo para evitar desbordamiento */
+  border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Estilo para la sección del botón */
+.button-sectionELUSU {
+  text-align: center; /* Centrar el texto */
+  margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilo para el botón de actualización */
+.BotonEliminar {
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Esquinas redondeadas */
+  background-color: #ffc107; /* Color de fondo */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambiar el cursor a puntero */
+  transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+/* Efecto hover para el botón de actualización */
+.BotonEliminar:hover {
+  background-color: #ffc107; /* Color al pasar el mouse */
+}
+
+
+
+/*footer*/
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 5%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-left: 10%;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+}
+
+.footer-column p,
+.footer-column ul,
+.footer-column li {
+  margin: 5px 0;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  border-top: 1px solid #444;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+/*factura*/
+.containerF {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px;
+}
+
+.mainF-content {
+  width: 70%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebarF {
+  width: 25%;
+  text-align: center;
+}
+
+.borderedF-logo {
+  border: 2px solid #ff9900;
+  padding: 1px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.let2 {
+  color: #ff9900;
+  text-align: center;
+}
+
+.invoiceF-info,
+.productF-info {
+  width: 100%;
+  margin: 50px 0;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.invoiceF-info td {
+  padding: 8px;
+}
+
+.productF-info th,
+.productF-info td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.productF-info th {
+  background-color: #ff9900;
+  color: white;
+}
+
+.totalF {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #ff9900;
+  text-align: left;
+}
+/*Metodos de pago*/
+
+.mainMP {
+  text-align: center;
+}
+.mainMP h1 {
+  color: #ff9900;
+  margin-top: 20px;
+}
+
+.metodosP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 20px;
+}
+
+.metodoP {
+  margin: 0 100px;
+  text-align: center;
+}
+
+.metodoP img {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 20px 10px;
+}
+
+.metodoP p {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.metodoP button {
+  padding: 10px 20px;
+  background-color: #ff9900;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.realizarP-pedido {
+  padding: 15px 30px;
+  background-color: #f28e1c;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin: 100px auto 20px;
+  width: 200px;
+}
+
+
+.icon-container {
+  position: relative;
+}
+
+.user-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.user-icon:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu a {
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0;
+}
