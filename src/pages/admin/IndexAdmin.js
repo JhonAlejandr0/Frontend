@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect } from "react";
-
+import { Carousel } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 export default function IndexAdmin() {
@@ -18,11 +18,29 @@ export default function IndexAdmin() {
   }, [navigate]);
   return (
     <div>
-      <main className="mainIN">
-        <h1>Panadería y Pastelería</h1>
-        <h2>El Pan De La Abuela</h2>
-        <img src="../IMG/pan.jpg" className="main-image" />
-      </main>
+      <Carousel>
+        <Carousel.Item>
+          <img
+            src="../IMG/banner1.jpeg"
+            className="carousel-image"
+            alt="Promoción Torta"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="../IMG/banner2.jpeg"
+            className="carousel-image"
+            alt="Promoción 1"
+          />
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            src="../IMG/banner3.jpeg"
+            className="carousel-image"
+            alt="Promoción 2"
+          />
+        </Carousel.Item>
+      </Carousel>
     </div>
   );
 }
