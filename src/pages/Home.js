@@ -45,7 +45,7 @@ const Home = () => {
       <div className="back4">
       <div className="product-list">
           <Link to="/CataBebidas" className="product-item">
-            <img src="../IMG/CocaCola1.jpeg" alt="Bebidas" className="product2-image" />
+            <img src="../IMG/Cocacola1.jpeg" alt="Bebidas" className="product2-image" />
             <h3 className="product-name">Bebidas</h3>
             <p className="product-description">Para que te refresques</p>
           </Link>
