@@ -1,8 +1,20 @@
 import { Carousel } from "react-bootstrap";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const Home = () => { 
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <div>
       <Carousel>
@@ -28,9 +40,10 @@ const Home = () => {
           />
         </Carousel.Item>
       </Carousel>
-      <div className="product-section">
-        <h2 className="product-header">Productos</h2>
-        <div className="product-list">
+      <div id="idproductos" className="product-section">
+      <h2 className="product-header">PRODUCTOS</h2>
+      <div className="back4">
+      <div className="product-list">
           <Link to="/CataBebidas" className="product-item">
             <img src="../IMG/CocaCola1.jpeg" alt="Bebidas" className="product2-image" />
             <h3 className="product-name">Bebidas</h3>
@@ -47,6 +60,7 @@ const Home = () => {
             <p className="product-description">Para que endulces tu día</p>
           </Link>
         </div>
+      </div>
       </div>
     </div>
   );

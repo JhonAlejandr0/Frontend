@@ -45,7 +45,7 @@ const CabeceraAdmin = () => {
       </nav>
       <div className="icon-container">
         <Link to="/perfil">
-          <img src="../IMG/JhonQuizizIngles.png" alt="Icono de Usuario" />
+          <img src="../IMG/logeado.png" alt="Icono de Usuario" />
         </Link>
       </div>
     </header>

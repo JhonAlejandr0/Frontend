@@ -16,10 +16,6 @@ const columns = [
     selector: (row) => row.telefono,
   },
   {
-    name: "Direccion de entrega",
-    selector: (row) => row.direccion,
-  },
-  {
     name: "Precio del pedido",
     selector: (row) => row.pago,
   },
@@ -77,7 +73,7 @@ const Pedidos = () => {
       <button className="botonVolver" onClick={() => window.history.back()}>
         <i className="fa-solid fa-arrow-left" />
       </button>
-      <main className="mainAU">
+      <main className="mainAU back5">
         <div className="search-bar"></div>
         <DataTable
           columns={columns}

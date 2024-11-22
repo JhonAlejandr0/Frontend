@@ -44,7 +44,7 @@ export default function DescripcionP() {
       </button>
 
       <main className="container mt-5">
-        <div className="row">
+        <div className="row back3">
           <div className="col-md-6">
             {producto.foto_URL ? (
               <img
@@ -63,7 +63,7 @@ export default function DescripcionP() {
             <p className="product-description">
               {producto.descripcionProducto}
             </p>
-            <p className="price font-black">
+            <p className="price font-black product-description">
               Precio: {formatCurrency(producto.precioProducto)}
             </p>
             <div className="mt-3 flex text-white gap-1">

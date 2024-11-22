@@ -49,7 +49,7 @@ export default function VerPedido() {
       <button className="botonVolver" onClick={() => window.history.back()}>
         <i className="fa-solid fa-arrow-left" />
       </button>
-      <div className="containerF">
+      <div className="containerF back5">
         <div className="mainF-content flex flex-col  justify-center space-x-2">
           <h1 className="let2  text-2xl text-orange-500">
             Detalle de la compra
@@ -57,7 +57,7 @@ export default function VerPedido() {
           <table className="invoiceF-info ">
             <tbody>
               <tr>
-                <td>NIT: 0000001</td>
+                <td>NIT: {idPedido}</td>
                 <td>DE: EL PAN DE LA ABUELA</td>
               </tr>
               <tr>
@@ -90,6 +90,14 @@ export default function VerPedido() {
           <div className="totalF">
             <strong>Valor total:</strong> {formatCurrency(valorTotal)}
           </div>
+          
+        </div>
+        <div className="sidebarF">
+          <img
+            src="../IMG/Logo.jpg"
+            alt="El Pan de la Abuela"
+            className="borderedF-logo"
+          />
         </div>
       </div>
       <ToastContainer />

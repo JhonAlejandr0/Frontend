@@ -29,12 +29,15 @@ export default function Catalogo({ categoria }) {
 
   return (
     <>
-      <button className="botonVolver" onClick={() => window.history.back()}>
+
+      
+      <main className="conte">
+        <section className="back5">
+        <button className="botonVolver" onClick={() => window.history.back()}>
+          
         <i className="fa-solid fa-arrow-left" />
       </button>
 
-      <main className="main">
-        <section>
           <h1 className="categoria-header">{categoria}</h1>
 
           <div className="productos-list">
@@ -45,6 +48,7 @@ export default function Catalogo({ categoria }) {
             ) : productos.length > 0 ? (
               productos.map((producto) =>
                 producto.stockProducto === 0 ? null : (
+
                   <div className="producto" key={producto.idProductos}>
                     <img
                       src={`/IMG/${producto.foto_URL}`}

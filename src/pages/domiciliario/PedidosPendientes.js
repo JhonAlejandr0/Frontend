@@ -11,7 +11,6 @@ export default function PedidosPendientes() {
   const [loading, setLoading] = useState(true);
   const [pedidos, setPedidos] = useState([]);
   const columns = [
-    { name: "ID", selector: (row) => row.idPedido },
     { name: "Nombre", selector: (row) => row.nombreCliente },
     { name: "Télefono", selector: (row) => row.telefonoCliente },
 
@@ -88,7 +87,7 @@ export default function PedidosPendientes() {
         ),
         verdetalles: (
           <Link to={"/verDetalle/" + domicilio.idPedido}>
-            <button className="bg-blue-500 w-full p-2 text-white">
+            <button className="bg-orange-500 w-full p-2 text-white">
               Ver detalles
             </button>
           </Link>
@@ -101,11 +100,12 @@ export default function PedidosPendientes() {
     }
   };
   return (
-    <div>
+    <div className="back5">
       <main>
-        <div className="">
+        <div>
           <section className="pedidos-pendientes">
-            <h1 className="text-4xl text-center ">Pedidos Pendientes</h1>
+            <div>
+            <h1 className="letraa" style={{ marginBottom: "30px", color: "orange" }}>Pedidos Pendientes</h1>
             <DataTable
               columns={columns}
               progressPending={loading}
@@ -120,6 +120,7 @@ export default function PedidosPendientes() {
                 </p>
               }
             ></DataTable>
+            </div>
           </section>
         </div>
       </main>

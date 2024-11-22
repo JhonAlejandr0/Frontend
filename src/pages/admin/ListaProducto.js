@@ -76,8 +76,8 @@ export default function ListaProducto() {
 
   return (
     <div>
-      <main className="mainAU">
-        <h1>Búsqueda de producto </h1>
+      <main className="mainAU back5">
+        <h1 className="letra">Búsqueda de producto </h1>
         <div className="contentP">
           <div className="search-section">
             <div className="search-bar">

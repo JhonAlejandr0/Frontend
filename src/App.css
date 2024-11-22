@@ -106,7 +106,8 @@ nav ul li ul li a:hover {
 
 .product-header {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin: 30px;
+  color: #fc8803;
 }
 
 .product-list {
@@ -126,6 +127,8 @@ nav ul li ul li a:hover {
   transition: transform 0.3s;
   text-align: center; /* Centra el texto dentro del enlace */
   overflow: hidden; /* Oculta el desbordamiento */
+  background-color: #ffff;
+  margin-top: 80px;
 }
 
 .product-image {
@@ -148,8 +151,8 @@ nav ul li ul li a:hover {
 }
 
 .product-description {
-  font-size: 14px;
-  color: #666;
+  font-size: 20px;
+  color: #441f00;
   margin-bottom: 10px;
 }
 
@@ -194,8 +197,8 @@ nav ul li ul li a:hover {
 .categoria-header {
   font-size: 28px;
   text-align: center;
-  margin-bottom: 20px;
-  color: #333;
+  margin-bottom: 30px;
+  color: #000000;
 }
 
 .productos-list {
@@ -270,7 +273,7 @@ nav ul li ul li a:hover {
 .botonVolver {
   margin: 5px; /* Margen inferior para separar del resto del contenido */
   font-size: 20px;
-  background-color: #ff0000; /* Color de hover para los botones */
+  background-color: #f7992e; /* Color de hover para los botones */
   padding: 3px 13px;
 }
 
@@ -332,11 +335,12 @@ nav ul li ul li a:hover {
 }
 
 .btn-d {
-  background-color: #ffc107;
+  background-color: #f5a107;
   color: #ffffff;
   padding: 10px 15px;
   display: flex;
   margin-left: 15px;
+  font-size: 18px;
 }
 
 .btn-add {
@@ -375,65 +379,130 @@ nav ul li ul li a:hover {
 
 
 /*login*/
-/* Estilo para el contenedor de inicio de sesión */
+.back{
+  background: linear-gradient(to right, #e4931965, #ffb62f);
+  margin: 20px;
+}
+.back2{
+  height: 110vh;
+  background: linear-gradient(to right, #e4931965, #ffb62f);
+}
+.back3{
+  height: 70vh;
+  background: linear-gradient(to right, #e4931965, #ffb62f);
+  margin: 30px;
+  padding: 20px;
+}
+.back4{
+  height: 70vh;
+  background: linear-gradient(to right, #e4931965, #ffb62f);
+}
+
+.Centerlogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+.Centerloginn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+  height: 60vh;
+}
+
 .login-container {
-  width: 300px; /* Ancho del contenedor */
-  padding: 20px; /* Espaciado interno */
-  border: 1px solid #ccc; /* Borde */
-  border-radius: 10px; /* Esquinas redondeadas */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
-  background-color: #ffffff; /* Color de fondo */
-  margin-top: 50px; /* Espacio superior */
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
 }
 
-/* Estilo para el título */
-h1 {
-  text-align: center; /* Centrar el texto */
-  color: var(--color-primary); /* Color del texto */
+.login-container h1 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
 }
 
-/* Estilo para los inputs */
-input {
-  width: 100%; /* Ancho completo */
-  padding: 10px; /* Espaciado interno */
-  margin: 10px 0; /* Margen superior e inferior */
-  border: 1px solid #ccc; /* Borde */
-  border-radius: 5px; /* Esquinas redondeadas */
-  font-size: 16px; /* Tamaño de la fuente */
+.login-container input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
-/* Estilo para el botón de inicio de sesión */
-.login-btn {
-  width: 100%; /* Ancho completo */
-  padding: 10px; /* Espaciado interno */
-  background-color: #ffc107; /* Color de fondo */
-  color: #fff; /* Color del texto */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Esquinas redondeadas */
-  font-size: 16px; /* Tamaño de la fuente */
-  cursor: pointer; /* Cambiar el cursor a puntero */
-  transition: background-color 0.3s; /* Transición suave para el hover */
+.login-container input:focus {
+  border-color: #f39c12;
+  outline: none;
 }
 
-/* Efecto hover para el botón */
-.login-btn:hover {
-  background-color: #ffc107; /* Color de fondo al pasar el mouse */
+.password-container {
+  position: relative;
 }
 
-/* Estilo para el enlace de contraseña olvidada */
+.password-container input {
+  padding-right: 40px; /* Espacio para el ícono */
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #aaa;
+  font-size: 18px;
+}
+
+.password-toggle:hover {
+  color: #f39c12;
+}
+
 .forgot-password {
-  text-align: center; /* Centrar el texto */
-  margin: 10px 0; /* Margen superior e inferior */
+  text-align: right;
+  margin-bottom: 20px;
 }
 
-/* Estilo para el enlace de registro */
+.forgot-password a {
+  text-decoration: none;
+  color: #e74c3c;
+  font-size: 14px;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 15px;
+}
+
+.login-btn:hover {
+  background: #e67e22;
+}
+
 .register-link {
-  color: var(--color-primary); /* Color del texto */
-  text-decoration: none; /* Sin subrayado */
+  color: #3498db;
+  text-decoration: none;
 }
 
 .register-link:hover {
-  text-decoration: underline; /* Subrayar al pasar el mouse */
+  text-decoration: underline;
 }
 
 
@@ -663,6 +732,10 @@ input {
   justify-content: space-between;
   padding: 100px;
 }
+.containerFf {
+  display: flex;
+  justify-content: center;
+}
 
 .mainF-content {
   width: 70%;
@@ -670,6 +743,15 @@ input {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px;
+}
+.mainF-contentt {
+  width: 80%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px;
 }
 
 .sidebarF {
@@ -678,7 +760,7 @@ input {
 }
 
 .borderedF-logo {
-  border: 2px solid #ff9900;
+  margin: 30px;
   padding: 1px;
   border-radius: 5px;
   margin-bottom: 20px;
@@ -722,8 +804,15 @@ input {
 /*Metodos de pago*/
 
 .mainMP {
-  text-align: center;
+  height: 70vh;
+  width: 80vh;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  margin: auto; /* Para centrarlo si no tiene flexbox en el padre */
+  border: 2px solid #ccc; /* Opcional, para visualizar el contenedor */
+  background-color: #f9f9f9; /* Opcional, para dar contexto */
 }
+
 .mainMP h1 {
   color: #ff9900;
   margin-top: 20px;
@@ -806,4 +895,189 @@ input {
 
 .dropdown-menu a:hover {
   background-color: #f0f0f0;
+}
+
+
+.conte{
+  margin-bottom: 90px;
+}
+
+.cart-containerr {
+  flex-direction: column; /* Ajusta los elementos internos en una columna */
+  justify-content: center; /* Centrado vertical opcional */
+  align-items: center; /* Centrado horizontal opcional */
+  padding: 20px; /* Espaciado interno para que no se vea muy comprimido */
+  border-radius: 8px; /* Bordes redondeados (opcional) */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.back5 {
+  background: linear-gradient(to right, #e4931965, #ffb62f);
+  padding: 20px; /* Espacio interno para mejor visualización */
+  border-radius: 8px; /* Bordes redondeados */
+  padding-bottom: 60px;
+}
+
+.letra{
+  color: #000000;
+  font-size: 1.2em;
+}
+.letraa{
+  color: orange;
+  font-size: 1.3em;
+}
+
+
+/* Estilo general para el formulario */
+.mainF {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e4931965, #ffb62f);
+  padding: 20px;
+}
+
+.registroF-container {
+  display: flex;
+  flex-wrap: wrap; /* Asegura que sea responsivo */
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 75%;
+  width: 100%;
+  margin: 20px;
+}
+
+.registroF {
+  flex: 2;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.registroF h2 {
+  font-size: 24px;
+  color: #ff7a00;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.registroF label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.registroF input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.registroF input:focus {
+  outline: none;
+  border-color: #ff7a00;
+  box-shadow: 0 0 4px rgba(255, 122, 0, 0.5);
+}
+
+.registroF button {
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+
+
+.sideF-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+  padding: 30px;
+  width: 80%;
+}
+
+.sideF-image img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+}
+/* Contenedor principal del perfil */
+.perfil-container {
+  width: 50%;
+  margin: 40px auto;
+  padding: 20px;
+  border: 3px solid #ff7a00; /* Color naranja para destacar el borde */
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  font-family: Arial, sans-serif;
+}
+
+/* Título */
+.perfil-container h1 {
+  font-size: 28px;
+  color: #ff7a00; /* Color naranja */
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Información del usuario */
+.perfil-info {
+  padding: 10px 0;
+  line-height: 1.8;
+  color: #333; /* Color de texto principal */
+}
+
+.perfil-info p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.perfil-info .font-black {
+  font-weight: bold;
+  color: #555; /* Color más oscuro para títulos */
+}
+
+.perfil-info .font-normal {
+  font-weight: normal;
+  color: #777; /* Color más claro para valores */
+}
+
+/* Botón de cerrar sesión */
+.perfil-container button {
+  width: 100%;
+  background-color: #ff7a00;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.perfil-container button:hover {
+  background-color: #e06b00; /* Color más oscuro al hacer hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra en hover */
+}
+.formR label{
+  font-size: 17px;
 }

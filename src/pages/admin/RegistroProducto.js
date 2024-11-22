@@ -13,7 +13,7 @@ export default function RegistroProducto() {
   const [stockProducto, setStockProducto] = useState("");
   const [precioProducto, setPrecioProducto] = useState("");
   const [foto_URL, setFoto_URL] = useState("");
-  const [idEmpleadoFK, setIdEmpleadoFK] = useState("");
+  const [idEmpleadoFK, setIdEmpleadoFK] = useState(1);
   const [categoria, setCategoria] = useState("");
   const [urlTemporal, seturlTemporal] = useState(null);
 
@@ -57,10 +57,10 @@ export default function RegistroProducto() {
 
   return (
     <div>
-      <main className="mainR">
-        <section className="formR-section">
-          <div className="formR-container">
-            <h1>REGISTRO PRODUCTOS</h1>
+      <main className="mainF">
+        <section className="registroF-container block  w-full justify-center">
+          <div className="registroF block">
+            <h1 className="letraa" style={{ marginBottom: "20px" }}>REGISTRO PRODUCTOS</h1>
             <form
               className="formR"
               onSubmit={Agregar}
@@ -117,6 +117,7 @@ export default function RegistroProducto() {
 
               <label htmlFor="categoria">Categoría</label>
               <select
+                className="back"
                 value={categoria}
                 onChange={(e) => setCategoria(e.target.value)}
                 required
@@ -127,21 +128,12 @@ export default function RegistroProducto() {
                 <option value="bebidas">Bebidas</option>
               </select>
 
-              <label htmlFor="idEmpleado">ID del empleado</label>
-              <input
-                value={idEmpleadoFK}
-                onChange={(e) => setIdEmpleadoFK(e.target.value)}
-                type="number"
-                placeholder="ID del empleado..."
-                required
-              />
-
               <div className="alinear">
                 <button type="submit">Agregar</button>
               </div>
             </form>
           </div>
-          <div className="imageR-container">
+          <div className="sideF-image">
             <img src="../IMG/Logo.jfif" alt="Logo El Pan De La Abuela" />
           </div>
         </section>

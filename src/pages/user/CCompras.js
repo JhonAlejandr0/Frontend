@@ -43,7 +43,7 @@ export default function CCompras({ rol }) {
         <i className="fa-solid fa-arrow-left" />
       </button>
 
-      <div className="cart-container">
+      <div className="cart-containerr back5">
         <h2 className="cart-title">Carrito de Compras</h2>
 
         {carrito.map((item, index) => (
@@ -55,7 +55,7 @@ export default function CCompras({ rol }) {
                 className="product-image"
               />
               <div>
-                <h5 className="product-name">{item.nombreProducto}</h5>
+                <h5 className="product-name letra">{item.nombreProducto}</h5>
                 <p>Cantidad: {item.cantidad}</p>
                 <p>Precio: {formatCurrency(item.precioProducto)}</p>
                 <p>
@@ -93,9 +93,9 @@ export default function CCompras({ rol }) {
         ))}
 
         <div className="cart-summary">
-          <h4>
+          <h2 className="letra">
             Valor Total de todos los productos: {formatCurrency(valorTotal)}
-          </h4>
+          </h2>
           <button onClick={() => manejoUrl()} className="btn btn-order">
             Realizar pedido
           </button>

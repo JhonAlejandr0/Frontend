@@ -35,8 +35,8 @@ const OlvidarPassword = ({ setEmail, email, setToken, token }) => {
     }
   };
   return (
-    <div className="my-20">
-      <center className="Centerlogin">
+    <div className="my-20 back3">
+      <center className="Centerloginn">
         <div className="login-container">
           <h1>Recuperar contraseña</h1>
           <form onSubmit={handleLogin}>

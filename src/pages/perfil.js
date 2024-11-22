@@ -40,7 +40,7 @@ export default function Perfil({ setRol }) {
   }
 
   return (
-    <div>
+    <div className="back5">
       <button className="botonVolver" onClick={() => navigate("/")}>
         <i className="fa-solid fa-arrow-left" />
       </button>

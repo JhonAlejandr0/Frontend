@@ -50,7 +50,7 @@ export const VerVentas = () => {
       response.data.map((venta) => {
         venta.verDetalles = (
           <Link to={"/verVentas/" + venta.idVenta}>
-            <button className="bg-blue-500 w-full p-2 text-white">
+            <button className="btn-d">
               Ver detalles
             </button>
           </Link>
@@ -64,13 +64,13 @@ export const VerVentas = () => {
     }
   };
   return (
-    <div>
+    <div className="back5">
       <button className="botonVolver" onClick={() => window.history.back()}>
         <i className="fa-solid fa-arrow-left" />
       </button>
-      <div className="containerF">
-        <div className="mainF-content flex flex-col  justify-center space-x-2">
-          <h1 className="let2  text-2xl text-orange-500">Detalle del pedido</h1>
+      <div className="containerFf">
+        <div className="mainF-contentt flex flex-col  justify-center space-x-2">
+          <h1 className="let2  text-2xl text-orange-500"style={{ marginBottom: "30px" }}>Detalle del pedido</h1>
           <DataTable
             columns={columns}
             data={ventas}

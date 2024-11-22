@@ -14,7 +14,7 @@ const HeaderGeneral = () => {
             <Link to="/dedicamos#NuestraUbicacion">NUESTRA UBICACION</Link>
           </li>
           <li>
-            <Link to="/">PRODUCTOS</Link>
+            <Link to="/#idproductos">PRODUCTOS</Link>
           </li>
         </ul>
       </nav>

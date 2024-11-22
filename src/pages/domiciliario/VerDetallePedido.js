@@ -69,9 +69,9 @@ const VerDetallePedido = () => {
       <button className="botonVolver" onClick={() => window.history.back()}>
         <i className="fa-solid fa-arrow-left" />
       </button>
-      <div className="containerF">
-        <div className="mainF-content flex flex-col  justify-center space-x-2">
-          <h1 className="let2  text-2xl text-orange-500">Detalle del pedido</h1>
+      <div className="containerFf back5">
+        <div className="mainF-contentt">
+          <h1 className="let2  text-2xl text-orange-500" style={{ marginBottom: "30px" }}>Detalle del pedido</h1>
           <DataTable
             columns={columns}
             data={productos}

@@ -86,8 +86,8 @@ export default function ListaUsuarios() {
 
   return (
     <div>
-      <main className="mainAU">
-        <h1>Búsqueda de usuario específico por cualquier campo:</h1>
+      <main className="mainAU back5">
+        <h1 className="letra">Búsqueda de usuario específico por cualquier campo:</h1>
         <div className="search-bar">
           <input
             type="text"

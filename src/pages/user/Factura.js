@@ -3,6 +3,8 @@ import React, { useContext } from "react";
 import { formatCurrency } from "../../helpers/format";
 import { Link } from "react-router-dom";
 import { CarritoContext } from "../../context/CarritoContext";
+import { useParams } from "react-router-dom";
+
 export default function Factura() {
   // Función para calcular el valor total de la factura
   const { carrito } = useContext(CarritoContext);
@@ -12,16 +14,18 @@ export default function Factura() {
       0
     );
   };
+  const { idPedido } = useParams();
+
 
   return (
     <div>
-      <div className="containerF">
+      <div className="containerF back5">
         <div className="mainF-content">
-          <h1 className="let2">Factura</h1>
+          <h1 className="letra">Factura</h1>
           <table className="invoiceF-info">
             <tbody>
               <tr>
-                <td>NIT: 0000001</td>
+                <td>NIT:{idPedido}</td>
                 <td>DE: EL PAN DE LA ABUELA</td>
               </tr>
               <tr>

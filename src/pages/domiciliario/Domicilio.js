@@ -11,7 +11,6 @@ export default function Domicilio() {
   const [busquedaDomicilio, setBusquedaDomicilio] = useState("");
   const [loading, setLoading] = useState(true);
   const columns = [
-    { name: "ID", selector: (row) => row.idPedido },
     { name: "Dirección", selector: (row) => row.direccion },
     { name: "Pago del domicilio", selector: (row) => row.pago },
     { name: "Pago a recibir", selector: (row) => row.valorTotal },
@@ -87,10 +86,10 @@ export default function Domicilio() {
   };
 
   return (
-    <div>
+    <div className="back5">
       <main className="mainP">
-        <h1 className="tex-4xl text-orange-500">Búsqueda de domicilios 😊</h1>
-        <div className="contentP">
+      <div className="contentP">
+        <h1 className="let2  text-2xl text-orange-500">Búsqueda de domicilios 😊</h1>
           <div className="search-section">
             <div className="search-bar">
               <input

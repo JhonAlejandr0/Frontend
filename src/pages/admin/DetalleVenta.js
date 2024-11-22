@@ -34,6 +34,7 @@ const DetalleVenta = () => {
       }, 2000);
     }
   };
+
   if (loading) {
     return (
       <div className="spinner w-full flex justify-center">
@@ -45,19 +46,19 @@ const DetalleVenta = () => {
     );
   }
   return (
-    <div>
+    <div className="back5">
       <button className="botonVolver" onClick={() => window.history.back()}>
         <i className="fa-solid fa-arrow-left" />
       </button>
       <div className="containerF">
-        <div className="mainF-content flex flex-col  justify-center space-x-2 border-2 border-orange-500 p-2 border-dashed">
+        <div className="mainF-content ">
           <h1 className="let2  text-2xl text-orange-500">
             Detalle de la compra
           </h1>
           <table className="invoiceF-info ">
             <tbody>
               <tr>
-                <td>NIT: 0000001</td>
+                <td>NIT: {idVenta}</td>
                 <td>DE: EL PAN DE LA ABUELA</td>
               </tr>
               <tr>
@@ -90,34 +91,36 @@ const DetalleVenta = () => {
             <strong>Valor total:</strong> {formatCurrency(valorTotal)}
           </div>
         </div>
-        <div className="p-5 border-2 mt-5 border-orange-500  border-dashed">
-          {typeof domicilio === "string" ? (
-            <p>{domicilio}</p>
-          ) : (
-            <div className="space-y-2 font-bold text-xl ">
-              <h1 className="font-bold text-4xl">Datos del domiciliario</h1>
-              <p>
-                Nombre:{" "}
-                <span className="font-light">{domicilio.NombreCompleto}</span>
-              </p>
-              <p>
-                Correo: <span className="font-light">{domicilio.correo}</span>
-              </p>
-              <p>
-                documento:{" "}
-                <span className="font-light">{domicilio.documento}</span>
-              </p>
-              <p>
-                direccion:{" "}
-                <span className="font-light">{domicilio.direccion}</span>
-              </p>
-              <p>
-                telefono:{" "}
-                <span className="font-light">{domicilio.telefono}</span>
-              </p>
-            </div>
-          )}
-        </div>
+        <div className="mainF-content">
+  {typeof domicilio === "string" ? (
+    <p>{domicilio}</p>
+  ) : (
+    <div className="space-y-2 font-bold text-xl">
+      <h1 className="letraa"style={{ marginBottom: "15px" }}>Datos del domiciliario</h1>
+      <p>
+        <span className="icon">👤</span> Nombre:{" "}
+        <span className="font-light">{domicilio.NombreCompleto}</span>
+      </p>
+      <p>
+        <span className="icon">📧</span> Correo:{" "}
+        <span className="font-light">{domicilio.correo}</span>
+      </p>
+      <p>
+        <span className="icon">🆔</span> Documento:{" "}
+        <span className="font-light">{domicilio.documento}</span>
+      </p>
+      <p>
+        <span className="icon">🏠</span> Dirección:{" "}
+        <span className="font-light">{domicilio.direccion}</span>
+      </p>
+      <p>
+        <span className="icon">📞</span> Teléfono:{" "}
+        <span className="font-light">{domicilio.telefono}</span>
+      </p>
+    </div>
+  )}
+</div>
+
       </div>
       <ToastContainer />
     </div>

@@ -73,14 +73,14 @@ export default function Formulario() {
 
   return (
     <div>
-      <main className="mainF ">
+      <main className="mainF">
         <section className="registroF-container block  w-full justify-center">
           <div className="registroF block">
             <h2>FORMULARIO DE REGISTRO</h2>
             <form onSubmit={(e) => handleRegister(e)}>
               <label htmlFor="documento">Documento</label>
               <input
-                type="text"
+                type="number"
                 id="name"
                 name="nombre"
                 value={documento}

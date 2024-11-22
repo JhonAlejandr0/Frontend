@@ -36,13 +36,13 @@ export default function MetodosPago() {
     }
   };
   return (
-    <div>
+    <div className="back5">
       <main className="mainMP">
-        <h1>Métodos de Pago</h1>
+        <h1 className="letraa">Métodos de Pago</h1>
         <div className="metodosP">
           <div className="metodoP">
             <img src="../IMG/efectivo.jpg" alt="Efectivo" />
-            <p>Efectivo</p>
+            <p className="letra">Efectivo</p>
             <button onClick={(e) => enviarCompra(e)}>Pagar</button>
           </div>
         </div>

@@ -15,7 +15,7 @@ const HeaderUser = () => {
             <Link to="/dedicamos#NuestraUbicacion">NUESTRA UBICACION</Link>
           </li>
           <li>
-            <Link to="/">PRODUCTOS</Link>
+            <Link to="/#idproductos">PRODUCTOS</Link>
           </li>
           <li>
             <Link to="/pedidos">PEDIDOS</Link>

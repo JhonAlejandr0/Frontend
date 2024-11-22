@@ -1,10 +1,22 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
 /* eslint-disable jsx-a11y/alt-text */
 import React from "react";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 export default function Dedicamos() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.replace("#", ""));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
-    <>
+    <div className="back5">
       <main className="main-dedicamos">
         <section className="descripcion-container product-section">
           <h1 className="product-header">¿A qué nos dedicamos y qué buscamos?</h1>
@@ -19,8 +31,7 @@ export default function Dedicamos() {
             muchas personas y ser reconocidos.
           </h2>
         </section>
-      </main>
-      <section id="NuestraUbicacion" className="ubicacion-container product-section">
+      <section id="NuestraUbicacion" className="descripcion-container product-section">
         <h2 className="product-header">Nuestra Ubicación</h2>
         <p className="product-description">Visítanos en nuestra tienda ubicada en:</p>
         <p className="product-description">
@@ -40,6 +51,7 @@ export default function Dedicamos() {
           />
         </div>
       </section>
-    </>
+      </main>
+    </div>
   );
 }
