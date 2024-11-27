@@ -1,5 +1,5 @@
-const nombreCompletoRegex =
-  /^([A-Za-zÁÉÍÓÚáéíóúÑñ]+ ){1,2}[A-Za-zÁÉÍÓÚáéíóúÑñ]+ [A-Za-zÁÉÍÓÚáéíóúÑñ]+$/;
+const nombreCompletoRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+
 export const validacionesFormulario = (
   nombre,
   correo,
