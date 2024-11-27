@@ -55,8 +55,10 @@ export default function Formulario() {
           contraseña,
           rol: "Cliente",
         });
-        toast.success("Producto agregado al carrito");
-                navigate("/login"); // Redirige a la lista de productos
+        toast.success("Se ha registrado correctamente");
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
       } catch (error) {
         if (
           error.response &&

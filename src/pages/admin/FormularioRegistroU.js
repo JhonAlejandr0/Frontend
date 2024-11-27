@@ -36,8 +36,10 @@ export default function Formulario() {
         rol,
       });
 
-      toast.success("Producto agregado al carrito");
-            navigate("/ListaUsuarios"); // Redirige a la lista de productos
+      toast.success("Usuario registrado correctamente");
+      setTimeout(() => {
+        navigate("/ListaUsuarios");
+      }, 2000); 
     } catch (error) {
       console.error("Error al crear Usuario:", error);
     }
