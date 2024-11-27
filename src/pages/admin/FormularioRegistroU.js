@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from "react";
+import {  toast } from "react-toastify";
 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
@@ -35,8 +36,8 @@ export default function Formulario() {
         rol,
       });
 
-      alert("Usuario registrado exitosamente");
-      navigate("/ListaUsuarios"); // Redirige a la lista de productos
+      toast.success("Producto agregado al carrito");
+            navigate("/ListaUsuarios"); // Redirige a la lista de productos
     } catch (error) {
       console.error("Error al crear Usuario:", error);
     }
