@@ -1,4 +1,5 @@
-const nombreCompletoRegex = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
+const nombreCompletoRegex =
+  /^([A-Za-zÁÉÍÓÚáéíóúÑñ]+ ){1,2}[A-Za-zÁÉÍÓÚáéíóúÑñ]+$/;
 
 export const validacionesFormulario = (
   nombre,
@@ -30,13 +31,15 @@ export const validacionesFormulario = (
     return "Correo inválido";
   }
   if (!nombreCompletoRegex.test(nombre)) {
-    return "Nombre completo inválido. Debe incluir un nombre y dos apellidos.";
+    return "Nombre completo inválido. Debe incluir al menos un nombre y un apellido, y puede tener hasta dos apellidos.";
   }
-  /*
+  
   const contraseñaRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+
   if (!contraseñaRegex.test(contraseña)) {
-    return "Contraseña inválida. Debe tener al menos 6 caracteres, incluir mayúsculas, minúsculas y algún carácter especial.";
-  } */
+    return "Contraseña inválida. Debe tener al menos 6 caracteres, incluir mayúsculas, minúsculas, un número y un carácter especial.";
+  }
+  
   return "";
 };
