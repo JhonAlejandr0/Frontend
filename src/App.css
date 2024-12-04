@@ -380,22 +380,22 @@ nav ul li ul li a:hover {
 
 /*login*/
 .back{
-  background: linear-gradient(to right, #e4931965, #ffb62f);
+  background: linear-gradient(to right, /*#e4931965 */#ffff,#ffff /*#ffb62f */);
   margin: 20px;
 }
 .back2{
   height: 110vh;
-  background: linear-gradient(to right, #e4931965, #ffb62f);
+  background: linear-gradient(to right, /*#e4931965 */#ffff,#ffff /*#ffb62f */);
 }
 .back3{
   height: 70vh;
-  background: linear-gradient(to right, #e4931965, #ffb62f);
+  background: linear-gradient(to right, /*#e4931965 */#ffff,#ffff /*#ffb62f */);
   margin: 30px;
   padding: 20px;
 }
 .back4{
   height: 70vh;
-  background: linear-gradient(to right, #e4931965, #ffb62f);
+  background: linear-gradient(to right, /*#e4931965 */#ffff,#ffff /*#ffb62f */);
 }
 
 .Centerlogin {
@@ -914,7 +914,7 @@ input {
 }
 
 .back5 {
-  background: linear-gradient(to right, #e4931965, #ffb62f);
+  background: linear-gradient(to right, /*#e4931965 */#ffff,#ffff /*#ffb62f */);
   padding: 20px; /* Espacio interno para mejor visualización */
   border-radius: 8px; /* Bordes redondeados */
   padding-bottom: 60px;
@@ -936,7 +936,7 @@ input {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to right, #e4931965, #ffb62f);
+  background: linear-gradient(to right, /*#e4931965 */#ffff,#ffff /*#ffb62f */);
   padding: 20px;
 }
 
